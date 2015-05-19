@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name = %q{moip}
-  gem.version = "1.0.2"
+  gem.version = "1.0.3"
 
   gem.authors = ["Guilherme Nascimento"]
   gem.date = %q{2010-11-10}
@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency(%q<rspec>, ["~> 2.1.0"])
 
-  gem.add_runtime_dependency(%q<nokogiri>, ["~> 1.4.3"])
-  gem.add_runtime_dependency(%q<httparty>, ["~> 0.6.1"])
+  gem.add_runtime_dependency(%q<nokogiri>, ["~> 1.6.6"])
+  gem.add_runtime_dependency(%q<httparty>, ["~> 0.13.5"])
   gem.add_runtime_dependency(%q<activesupport>, [">= 2.3.2"])
 end
