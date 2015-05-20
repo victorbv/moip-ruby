@@ -42,7 +42,17 @@ module MoIP
         puts "************ XML ************"
         puts body
         full_data = peform_action!(:post, 'EnviarInstrucao/Unica', :body => body)
-       # raise full_data.inspect
+        # raise full_data.inspect
+        get_response!(full_data["ns1:EnviarInstrucaoUnicaResponse"]["Resposta"])
+      end
+
+      # Envia uma instrução para pagamento único
+      def checkout_transparent(attributes = {})
+        body = TransparentPayment.body(attributes)
+        puts "************ XML ************"
+        puts body
+        full_data = peform_action!(:post, 'EnviarInstrucao/Unica', body: body)
+        # raise full_data.inspect
         get_response!(full_data["ns1:EnviarInstrucaoUnicaResponse"]["Resposta"])
       end
 

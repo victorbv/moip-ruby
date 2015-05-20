@@ -18,8 +18,9 @@ module MoIP
   class InvalidReceiving < ValidationError; end
   class InvalidValue < ValidationError; end
 
-  autoload :DirectPayment, 'moip/direct_payment'
-  autoload :Client,        'moip/client'
+  autoload :DirectPayment,      'moip/direct_payment'
+  autoload :TransparentPayment, 'moip/transparent_payment'
+  autoload :Client,             'moip/client'
 
   # URI para acessar o serviço
   mattr_accessor :uri
