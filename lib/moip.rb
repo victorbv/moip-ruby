@@ -43,6 +43,11 @@ module MoIP
       ActiveSupport::Deprecation.warn("MoIP.checkout has been deprecated. Use MoIP::Client.checkout instead", caller)
       MoIP::Client.checkout(attributes)
     end
+    
+    def checkout_transparent(attributes = {})
+      ActiveSupport::Deprecation.warn("MoIP.checkout_transparent has been deprecated. Use MoIP::Client.checkout_transparent instead", caller)
+      MoIP::Client.checkout_transparent(attributes)
+    end
 
     def query(token)
       ActiveSupport::Deprecation.warn("MoIP.query has been deprecated. Use MoIP::Client.query instead", caller)
